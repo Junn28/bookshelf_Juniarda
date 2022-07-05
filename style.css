@@ -1,0 +1,228 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: rgb(202, 62, 62);
+  color: white;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.column {
+  width: 100%;
+  float: none;
+  padding: 15px;
+}
+
+.row {
+  margin: auto;
+  position: relative;
+  padding-top: 48px;
+}
+
+.row:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+form fieldset {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#myForm input {
+  margin-bottom: 5px;
+  width: 100%;
+  padding: 5px;
+}
+
+form fieldset legend {
+  text-align: center;
+  font-weight: bold;
+}
+
+#menu-search {
+  background-color: rgb(202, 62, 62);
+  font-weight: bold;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#menu-search input {
+  padding: 5px;
+  border-radius: 3px;
+  border: none;
+  margin: 5px;
+}
+
+#menu-search .container {
+  margin: 5px;
+  border: 2px solid white;
+  width: 47%;
+}
+
+input#search {
+  width: 100%;
+}
+
+input#sBuku:hover {
+  cursor: pointer;
+  color: white;
+  background-color: black;
+}
+
+.container {
+  margin-bottom: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.item {
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 12px 24px 12px 24px;
+  background-color: rgb(202, 62, 62);
+  align-items: center;
+  display: flex;
+  color: white;
+}
+
+.item:hover {
+  transform: scale(1.05);
+}
+
+.item > .inner h3 {
+  margin-bottom: unset;
+}
+
+.item > .inner p {
+  margin-top: 5px;
+  font-style: italic;
+}
+
+.shadow {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.1);
+}
+
+.check-button {
+  background: url('./assets/checked.png');
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  cursor: pointer;
+  border: none;
+}
+
+.undo-button {
+  background: url('./assets/restart.png');
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  cursor: pointer;
+  border: none;
+}
+
+.trash-button {
+  background: url('./assets/trash.png');
+  width: 40px;
+  height: 40px;
+  margin-left: 16px;
+  cursor: pointer;
+  border: none;
+}
+
+.popup {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  position: fixed;
+}
+
+.hidden {
+  display: none;
+}
+
+.popup .isiPopup {
+  background-color: white;
+  width: 300px;
+  height: 200px;
+  margin: 50px auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: space-evenly;
+}
+
+.isiPopup h3 {
+  text-align: center;
+}
+
+#popup-delete h3 {
+  color: red;
+}
+
+hr {
+  width: 70%;
+  background-color: rgb(202, 62, 62);
+  height: 2px;
+  border: none;
+}
+
+.isiPopup .container-button {
+  display: flex;
+}
+
+.container-button button {
+  background-color: white;
+  border-radius: 5px;
+  width: 75px;
+  padding: 5px;
+  margin: 5px;
+}
+
+button.submit {
+  border: 2px solid lightgreen;
+}
+
+button.batal {
+  border: 2px solid rgb(241, 74, 74);
+}
+
+button.submit:hover {
+  background-color: lightgreen;
+  color: white;
+  border: none;
+}
+
+button.batal:hover {
+  background-color: rgb(241, 74, 74);
+  color: white;
+  border: none;
+}
+
+@media screen and (min-width: 480px) {
+  .column {
+    width: 50%;
+    float: left;
+  }
+}

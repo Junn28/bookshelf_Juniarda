@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Bookshelf</title>
+  </head>
+  <body>
+    <header>My Bookshelf</header>
+    <div class="row">
+      <div class="column">
+        <form id="myForm">
+          <fieldset style="border: 3px solid rgb(202, 62, 62)">
+            <legend>Masukkan Buku Baru</legend>
+            <label for="judul">Judul Buku:</label><br />
+            <input type="text" id="judul" name="judul" required /><br />
+            <label for="penulis">Penulis:</label><br />
+            <input type="text" id="penulis" name="penulis" required /><br />
+            <label for="tahun">Tahun:</label><br />
+            <input type="number" id="tahun" name="tahun" required /><br /><br />
+            <input type="submit" id="tombol" value="Buat Buku Baru" />
+          </fieldset>
+        </form>
+
+        <!-- Menu cari buku -->
+        <div id="menu-search">
+          <input type="search" id="search" onkeyup="cariBuku()" placeholder="Cari Buku" />
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="container shadow">
+          <h3>Belum selesai dibaca</h3>
+          <div id="noRead"></div>
+        </div>
+        <div class="container shadow">
+          <h3>Sudah selesai dibaca</h3>
+          <div id="read"></div>
+        </div>
+      </div>
+
+      <!-- popup tambah buku -->
+      <div id="popup-add" class="hidden popup">
+        <div class="isiPopup shadow">
+          <h3>Informasi Buku</h3>
+          <hr />
+          <table>
+            <tr>
+              <td>Judul</td>
+              <td>: <span id="infoJudul"></span></td>
+            </tr>
+            <tr>
+              <td>Penulis</td>
+              <td>: <span id="infoPenulis"></span></td>
+            </tr>
+            <tr>
+              <td>Tahun</td>
+              <td>: <span id="infoTahun"></span></td>
+            </tr>
+          </table>
+          <div class="container-button">
+            <button id="add-batal" class="batal">Batal</button>
+            <button id="add-submit" class="submit">Submit</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- popup hapus buku -->
+      <div id="popup-delete" class="popup hidden">
+        <div class="isiPopup shadow">
+          <h3>!!Perhatian!!</h3>
+          <p>Apakah kamu ingin menghapus buku?</p>
+          <div class="container-button">
+            <button id="delete-batal" class="batal">Batal</button>
+            <button id="delete-submit" class="submit">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/modal.js"></script>
+  </body>
+</html>
