@@ -225,4 +225,13 @@ button.batal:hover {
     width: 50%;
     float: left;
   }
+  
+  .popup {
+    position: fixed;
+    top: 0;
+  }
+
+  .popup .isiPopup {
+    margin-top: 30vh;
+  }
 }
