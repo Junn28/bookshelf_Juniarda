@@ -57,8 +57,14 @@ function buatBuku(b) {
   container.classList.add('item');
   container.setAttribute('id', `buku-${b.id}`);
 
-  container.append(textContainer);
+  const containerButton = document.createElement('div');
+  containerButton.classList.add('button');
 
+  const content = document.createElement('div');
+  content.classList.add('content');
+  content.append(textContainer, containerButton);
+
+  container.append(content);
   if (b.isCompleted) {
     const undoButton = document.createElement('button');
     undoButton.classList.add('undo-button');
@@ -74,7 +80,7 @@ function buatBuku(b) {
       popupDelete(b.id);
     });
 
-    container.append(undoButton, trashButton);
+    containerButton.append(undoButton, trashButton);
   } else {
     const checkButton = document.createElement('button');
     checkButton.classList.add('check-button');
@@ -90,7 +96,7 @@ function buatBuku(b) {
       popupDelete(b.id);
     });
 
-    container.append(checkButton, trashButton);
+    containerButton.append(checkButton, trashButton);
   }
 
   return container;
