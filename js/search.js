@@ -1,5 +1,3 @@
-const searchBuku = new Event('searchBuku');
-
 function cariBuku() {
   var iSearch = document.getElementById('search').value.toLowerCase();
   var divItem = document.getElementsByClassName('item');
