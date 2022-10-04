@@ -101,7 +101,6 @@ input#sBuku:hover {
   padding: 12px 24px 12px 24px;
   background-color: rgb(202, 62, 62);
   align-items: center;
-  display: flex;
   color: white;
 }
 
@@ -109,11 +108,17 @@ input#sBuku:hover {
   transform: scale(1.05);
 }
 
-.item > .inner h3 {
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content > .inner h3 {
   margin-bottom: unset;
 }
 
-.item > .inner p {
+.content > .inner p {
   margin-top: 5px;
   font-style: italic;
 }
